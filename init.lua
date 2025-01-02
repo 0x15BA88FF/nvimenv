@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.maplocalleader = "\\"
 
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -18,7 +18,10 @@ require("lazy").setup({
 }, require "config.lazy")
 
 
-require("options")
-require("autocmds")
-vim.schedule(function() require "mappings" end)
-vim.schedule(function() require "highlights" end)
+require("config.options")
+require "config.autocmds"
+
+vim.schedule(function()
+    require "config.mappings"
+    require "config.highlights"
+end)
