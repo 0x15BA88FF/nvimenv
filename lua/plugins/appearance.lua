@@ -1,15 +1,15 @@
 return {
     {
-        "echasnovski/mini.nvim",
-        config = function()
-            local statusline = require "mini.statusline"
-            statusline.setup { use_icons = true }
-        end
+        'nvim-lualine/lualine.nvim',
+        dependencies = {
+            { "echasnovski/mini.icons", opts = {} },
+        }
     },
     {
         "folke/snacks.nvim",
         opts = {
-            dashboard = {}
+            dashboard = {},
+            zen = {}
         }
     },
     {
