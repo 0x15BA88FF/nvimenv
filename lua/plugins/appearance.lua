@@ -8,7 +8,7 @@ return {
     {
         "folke/snacks.nvim",
         opts = {
-            dashboard = {},
+            dashboard = { example = "advanced" },
             zen = {}
         }
     },
