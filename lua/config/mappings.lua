@@ -80,3 +80,9 @@ map("n", "[q", vim.cmd.cprev, { desc = "Previous Quickfix" })
 map("n", "<leader>\\", "<C-W>s", { desc = "Split Window Below", remap = true })
 map("n", "<leader>|", "<C-W>v", { desc = "Split Window Right", remap = true })
 map("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
+
+-- LSP
+map("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show Diagnostics" })
+map("n", "<leader>f", vim.lsp.buf.format, { desc = "Format Document" })
+map("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
+map("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
